@@ -2,7 +2,7 @@ function toRoman(num) {
   var angka = [1, 4, 5, 9, 10, 40, 50, 90, 100, 400, 500, 900, 1000];
   var roman = ['I', 'IV', 'V', 'IX', 'X', 'XL', 'L', 'XC', 'C', 'CD', 'D', 'XM', 'M'];
 
-  if (num < 0 || num > 3000) {
+  if (num <= 0 || num >= 3000) {
     return '';
   } else {
     for (var i = angka.length - 1; i >= 0; i--) {
@@ -11,7 +11,6 @@ function toRoman(num) {
         return roman[i] + toRoman(remaining);
       }
     }
-    return '';
   }
 }
 
